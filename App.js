@@ -1,9 +1,17 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, Image, TextInput} from 'react-native';
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TextInput,
+  ScrollView,
+} from 'react-native';
 export default class App extends Component {
   render() {
     return (
-      <View style={{flex: 1}}>
+      <ScrollView style={{flex: 1}}>
         <View style={{flex: 1, backgroundColor: 'white'}}>
           {/* seacrh bar */}
           <View
@@ -341,6 +349,23 @@ export default class App extends Component {
               </View>
             </View>
           </View>
+
+          <View
+            style={{
+              height: 17,
+              backgroundColor: '#f2f2f4',
+              marginTop: 20,
+            }}></View>
+          {/* go news */}
+          <View>
+            <View>
+              <Image
+                source={require('./dummy/sepak-bola.jpg')}
+                style={{height: 496}}
+              />
+            </View>
+            <View></View>
+          </View>
         </View>
         <View
           style={{height: 54, flexDirection: 'row', backgroundColor: 'white'}}>
@@ -425,7 +450,7 @@ export default class App extends Component {
             </Text>
           </View>
         </View>
-      </View>
+      </ScrollView>
     );
   }
 }
